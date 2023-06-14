@@ -118,12 +118,13 @@ section.work {
   transition: transform .2s ease, box-shadow .1s ease, border-radius .5s ease;
   border-radius: 20px;
   margin-top: 5rem;
+  overflow: hidden;
 }
 
 .project:hover {
   transform: scale(1.007);
-  box-sizing: 0 20px 4px;
   border-radius: 27px;
+  box-shadow: 0 0 50px var(--color-night-nav);
 }
 
 .odd {
@@ -150,9 +151,16 @@ section.work {
 
 .project img {
   max-width: 70%;
-  height: auto;
   width: 70%;
+  max-height: 2rem;
+  transition: max-height 2s ease;
   object-fit: cover;
+  
+  border-radius: 2%;
+}
+
+.project:hover img {
+  max-height: 70rem;
 }
 
 
@@ -190,7 +198,7 @@ footer p {
 }
 
 .socials a {
-  transition: transform .1s ease;
+  transition: transform .05s ease;
 }
 
 .socials a:hover {
@@ -199,15 +207,15 @@ footer p {
 
 
 :root {
-  --color-isabelline: hsl(18, 22%, 91%);
-  --color-platinum: hsl(60, 1%, 85%);
-  --color-night: hsl(0, 0%, 8%);
-  --color-night-nav: hsl(0, 0%, 0%, 80%);
-  --color-redwood: hsl(358, 46%, 45%);
-  --color-redwood-nav: hsl(358, 46%, 45%, 92%);
+  --color-isabelline: hsl(203, 69%, 5%);
+  --color-platinum: black;
+  --color-night: hsl(212, 60%, 95%);
+  --color-night-nav: hsl(212, 60%, 95%, 80%);
+  --color-redwood: hsl(195, 100%, 39%);
+  --color-redwood-nav: hsl(195, 100%, 39%, 92%);
   --color-feldgrau: hsl(145, 11%, 39%);
-  --color-chinese-violet: hsl(269, 9%, 45%);
-  --color-chinese-violet-nav: hsl(269, 9%, 45%, 91%);
+  --color-chinese-violet: hsl(195, 100%, 68%);
+  --color-chinese-violet-nav: hsl(195, 100%, 68%, 91%);
 
 }
 
