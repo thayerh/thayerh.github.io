@@ -1,84 +1,123 @@
 <!DOCTYPE html>
-<!--References:
-  https://blog.hubspot.com/marketing/best-personal-websites
-  https://www.seanhalpin.xyz/
--->
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thayer Hicks Portfolio</title>
-  <script src="function.js"></script>
-  </script>
+  <title>Thayer Hicks</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="fun.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@800&family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inconsolata:wght@800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <ul id="menu">
-        <li><a href="index.html">Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="fun.html">Fun</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <header id="header">
+      <nav>
+        <div class="header-left">
+          <img class="signature" src="Images/Signature.png">
+        </div>
+        <div class="header-right">
+          <ul class="header-buttons">
+            <li><a href="#about"><h3>About</h3></a></li>
+            <li><a href="#fun"><h3>Fun</h3></a></li>
+            <li><a href="#contact"><h3>Contact</h3></a></li>
+          </ul>
+          <img class="dark-theme" src="Images/dark-theme.webp">
+        </div>
+      </nav>
   </header>
 
-  <div class="content">
-    <h1 class="name-header">
-      <span class="intro">
-        Hey, I'm Thayer!
-      </span>
-      <span class="intro sub">
-        Here's what I've been working on.
-      </span>
-
-    </h1>
-    <section class="work" id="work">
-      <div class="project odd" id="1">
-        <a href="https://github.com/thayerh/Akari" class="project-container">
-          <h2>Akari</h2>
-          <img src="Images/Akari.jpg" alt="Akari">
-          <p>Interactive Akari game implemented in Java</p>
-          <a class="github-project-link" href="https://github.com/thayerh/Akari">Visit on GitHub</a>
-        </a>
+  <main>
+    <section id="work" class="work">
+      <div class="work-left">
+        <div class="headshot-container">
+          <img class="headshot" src="Images/Headshot.JPG">
+        </div>
+        <div class="intro-text">
+          <!---Placeholder-->
+          <h1>Hey! I'm Thayer,<br />
+            a <span id="typewriter"></span><span id="cursor">_</span>
+          </h1>
+        </div>
+        <script src="typewriter.js"></script>
       </div>
-      <!--Same project added for scalability-->
-      <div class="project even" id="2">
-        <a href="https://github.com/thayerh/Akari" class="project-container">
-          <h2>Akari</h2>
-          <img src="Images/Akari.jpg" alt="Akari">
-          <p>Interactive Akari game implemented in Java</p>
-          <a class="github-project-link" href="https://github.com/thayerh/Akari">Visit on GitHub</a>
-        </a>
+      <div class="work-right">
+        <div class="project-container">
+          <div class="project dinesmart">
+            <div class="project-text">
+              <h2>DineSmart</h2>
+              <p>Nutrition tracker for UNC dining halls</p>
+            </div>
+            <div class="project-image-container">
+              <img src="https://static.thenounproject.com/png/125552-200.png">
+            </div>            
+          </div>
+        </div>
+        <div class="project-container">
+          <div class="project tetrashell">
+            <div class="project-text">
+              <h2>TetraShell</h2>
+              <p>Tetris quicksave modifier</p>
+            </div>
+            <div class="project-image-container">
+              <img src="Images/TetraShell.jpg">
+            </div>            
+          </div>
+        </div>
+        <div class="project-container">
+          <div class="project akari">
+            <div class="project-text">
+              <h2>Akari</h2>
+              <p>JavaFX Akari Game</p>
+            </div>
+            <div class="project-image-container">
+              <img src="Images/Akari-Icon.png">
+            </div>            
+          </div>
+        </div>
+        <div class="project-container">
+          <div class="project card-games">
+            <div class="project-text">
+              <h2>Card Games</h2>
+              <p>Interactive card games and game-theory optimal simulations</p>
+            </div>
+            <div class="project-image-container">
+              <img src="Images/Spade.png">
+            </div>            
+          </div>
+        </div>
       </div>
-      
-      <!-- Add more project items as needed -->
     </section>
-  </div>
+
+    <section>
+      <h2>About Me</h2>
+      <p>Write something interesting about yourself here.</p>
+    </section>
+
+    <section id="fun" class="fun">
+      <h2>Fun</h2>
+      <div class="project">
+        <h3>some of my favorite songs recently</h3>
+        <div class="spofify-container">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2MVwrvjmcdt4MsYYLCYMt8?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact Me</h2>
+      <p>You can reach out to me using the following methods:</p>
+      <ul>
+        <li>Email: yourname@example.com</li>
+        <li>Phone: (123) 456-7890</li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/yourprofile">Your LinkedIn Profile</a></li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <img src="Images/Signature.png" class="signature" alt="Signature">
-    <div class="socials">
-      <a href="https://github.com/thayerh" class="social-link">
-        <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Reddit2_svg-1024.png" class="github-logo" alt="GitHub">
-      </a> 
-      <a href="https://www.linkedin.com/in/thayer-hicks-unc/" class="social-link">
-        <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Linkedin2_svg-256.png" class="linkedin-logo" alt="LinkedIn">
-      </a>
-      <a href="https://www.facebook.com/thayer.hicks" class="social-link">       
-        <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_svg-256.png" class="facebook-logo" alt="Facebook">
-      </a>
-      <a href="https://www.youtube.com/channel/UCCcmtYWuEr4TKgHzkBGIFgg" class="social-link">
-        <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Youtube3_svg-256.png" class="youtube-logo" alt="Youtube">
-      </a>
-    </div>
-    <p>Handcrafted by me.</p>
-    <p>&copy; 2023 Thayer Hicks</p>
-
+    <p>&copy; 2023 Your Name</p>
   </footer>
 </body>
 </html>
