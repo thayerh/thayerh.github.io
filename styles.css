@@ -59,6 +59,7 @@ nav ul {
 
 div.header-right img {
     height: var(--size-signature-height);
+    max-height: 100%;
     width: auto;
     padding: 0 14px;
 }
@@ -89,6 +90,8 @@ header h3 {
 
 section.work {
     display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;   
     padding-top: var(--size-header-height);
 }
 
@@ -97,6 +100,7 @@ section.work {
     padding: fixed;
     flex-direction: column;
     width: 60%;
+    min-width: var(--size-work-left-min-width);
     height: 100%;
     justify-content: center;
 }
@@ -141,11 +145,13 @@ div.intro-text span, div.intro-text h1 {
     width: 40%;
     height: fit-content;
     justify-content: center;
+    align-items: center;
 }
 
 .project-container {
     margin-top: var(--padding-project-top);
     min-height: var(--size-project-min-height);
+    min-width: var(--size-project-min-width);
     width: 80%;
     background-color: var(--color-powder-blue);
     border-radius: var(--radius-project);
@@ -197,6 +203,24 @@ section.fun h2 {
     color: var(--color-alice-blue);
 }
 
+.top-section {
+    width: 100%;
+    position: static;
+}
+.bottom-section {
+    width: 100%;
+}
+
+footer {
+    background-color: var(--color-powder-blue);
+}
+
+.bottom-container {
+    width: 100%;
+    height: auto;
+    background-color: aliceblue;
+}
+
 :root {
     --color-alice-blue: rgba(239, 245, 251, 100%);
     --color-powder-blue: rgba(160, 181, 207, 100%);
@@ -207,6 +231,8 @@ section.fun h2 {
     --size-header-height: 60px;
     --size-signature-height: 20px;
     --size-project-min-height: 8rem;
+    --size-project-min-width: 325px;
+    --size-work-left-min-width: 700px;
 
     --padding-headshot-top: 8rem;
     --padding-intro-text-top: 2rem;
