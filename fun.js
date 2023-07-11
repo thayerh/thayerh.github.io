@@ -23,8 +23,14 @@ window.addEventListener('scroll', function() {
         console.log('fixing');
     } else if (bottomRect.top > (viewportHeight)) {
         top.style.position = 'static';
+        top.style.bototm = (viewportHeight) + 'px';
         console.log('unfix');
     } else {
+        top.style.position = 'fixed';
+        top.style.bottom = 0 + 'px';
+        //bottom.style.paddingTop = viewportHeight + 'px';
+        bottom.style.top = (viewportHeight) + 'px';
+        console.log('fixing');
         console.log('rel');
         //top.style.position = 'relative';
     }
