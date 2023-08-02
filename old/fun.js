@@ -1,3 +1,4 @@
+/*
 window.addEventListener('scroll', function() {
     const navUl = this.document.getElementById('header')
 
@@ -34,4 +35,19 @@ window.addEventListener('scroll', function() {
         console.log('rel');
         //top.style.position = 'relative';
     }
+});
+*/
+
+const gradientBackground = document.getElementById("gradientBackground");
+
+gradientBackground.addEventListener("mousemove", (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    // Calculate the center position as a percentage
+    const centerX = (mouseX / window.innerWidth) * 100;
+    const centerY = (mouseY / window.innerHeight) * 100;
+
+    // Apply the radial gradient style with dynamic center position
+    gradientBackground.style.background = `radial-gradient(circle at ${centerX}% ${centerY}%, #050930, #000000)`;
 });
