@@ -1,7 +1,7 @@
-const CircleNavBox = ({ bg, tc, text, icon, to }) => {
+const ContactNavBox = ({ bg, tc, to, text, icon }) => {
     return ( 
-        <a href={to} className="circleNavBox">
-            <div className="bubbleContainer cnbContainer" style={{
+        <a href={to} className="contactNavBox">
+            <div className="bubbleContainer conContainer" style={{
                 backgroundColor: String(bg),
                 color: String(tc),
             }}>
@@ -14,4 +14,4 @@ const CircleNavBox = ({ bg, tc, text, icon, to }) => {
     );
 }
  
-export default CircleNavBox;
+export default ContactNavBox;
