@@ -47,7 +47,6 @@ a {
 
 .stbContainer h3 {
   font-size: 20pt;
-  color: var(--color-smoky-black)
 }
 
 
@@ -58,10 +57,56 @@ a {
 }
 
 .cnbContainer {
-  width: 95%;
+  height: calc(50vw - 6px);
   min-height: 170px;
-  border-radius: 75px;
-  margin-right: 0;
+  border-radius: 500px;
+  margin-left: 3px;
+  margin-right: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cnbSub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.conContainer {
+  height: calc(50vw - 6px);
+  min-height: 170px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.btbContainer {
+  border-radius: 50px;
+  width: 100%;
+  padding: 25px;
+  justify-content: flex-start;
+}
+
+.btbChild {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.btbBottom {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  margin-top: 15px;
+}
+
+.btbContainer h2 {
+  font-size: 30pt;
 }
 
 

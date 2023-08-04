@@ -1,7 +1,10 @@
-const SlideTextBox = ({bg, to}) => {
+const SlideTextBox = ({bg, tc, to}) => {
     return ( 
         <a href={to} className="slideTextBox">
-            <div className="bubbleContainer stbContainer" style={{backgroundColor: bg}}>
+            <div className="bubbleContainer stbContainer" style={{
+                backgroundColor: bg,
+                color: tc
+            }}>
                 <div className="stbChild stbTop">
                     <h3>My Tech Stack</h3>
                 </div>
