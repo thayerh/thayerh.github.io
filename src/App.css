@@ -30,9 +30,11 @@ a {
 }
 
 
+
+
 .stbContainer {
-  min-height: 426px;
-  height: 63vh; 
+  min-height: 320px;
+  height: 40vh; 
   border-radius: 50px;
   width: 100%;
   padding: 25px;
@@ -210,6 +212,18 @@ a {
   gap: 24px
 }
 
+
+
+/* Apply the initial fade-in styles */
+.fade-in-container {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Apply the fade-in effect when the container is in view */
+.visible {
+  opacity: 1;
+}
 
 
 
