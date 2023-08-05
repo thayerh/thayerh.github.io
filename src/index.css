@@ -11,6 +11,7 @@ p {
   margin: 0;
   padding: 0;
 }
+
 /*
 div {
   border-color: red;
@@ -19,9 +20,10 @@ div {
 }
 */
 
+
 body {
   margin: 0;
-  font-family: 'ibm-plex-mono', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #14110f;
