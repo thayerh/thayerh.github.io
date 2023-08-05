@@ -1,4 +1,4 @@
-const BigTextBox = ({bg, tc, head, body}) => {
+const BigTextBox = ({bg, tc, fs, head, body}) => {
     return ( 
         <div className="bubbleContainer btbContainer" style={{
             backgroundColor: bg,
@@ -8,7 +8,9 @@ const BigTextBox = ({bg, tc, head, body}) => {
                 <h3>{head}</h3>
             </div>
             <div className="btbChild btbBottom">
-                <h2>{body}</h2> 
+                <h2 style={{
+                    fontSize: fs
+                }}>{body}</h2> 
             </div>
         </div>
     );

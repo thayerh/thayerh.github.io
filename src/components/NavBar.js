@@ -1,4 +1,4 @@
-import NavIcon from "./NavIcon";
+import NavIcon from "../assets/icons/NavIcon";
 
 const NavBar = () => {
     return ( 

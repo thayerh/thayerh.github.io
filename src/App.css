@@ -26,7 +26,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 
@@ -86,6 +86,8 @@ a {
 
 
 .btbContainer {
+  min-height: 426px;
+  height: 63vh;
   border-radius: 50px;
   width: 100%;
   padding: 25px;
@@ -105,9 +107,109 @@ a {
   margin-top: 15px;
 }
 
-.btbContainer h2 {
-  font-size: 30pt;
+
+.sdbContainer {
+  min-height: 260px;
+  height: 39vh;
+  display: flex;
+  flex-direction: row;
+  border-radius: 50px;
+  width: 100%;
+  padding: 25px;
+  justify-content: space-between;
+  gap: 8px;
 }
+
+.sdbRight h2 {
+  margin-bottom: 6px;
+}
+
+
+.bpbContainer {
+  min-height: 426px;
+  height: 63vh; 
+  border-radius: 50px;
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pbChild {
+  width: 100%;
+}
+
+.spbContainer h2 {
+  font-size: 10pt;
+}
+
+.pbTop {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pbMiddle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pbBottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.spbContainer {
+  min-height: 213px;
+  height: 31.5vh;
+  width: calc(50vw - 6px);
+  border-radius: 50px;
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px
+}
+
+
+.gitbContainer {
+  min-height: 426px;
+  height: 63vh; 
+  border-radius: 50px;
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gitbChild {
+  width: 100%;
+  text-align: left;
+}
+
+.gitbMiddle {
+  width: 80%;
+}
+
+.gitbBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px
+}
+
 
 
 
