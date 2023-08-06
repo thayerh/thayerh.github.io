@@ -1,13 +1,25 @@
 import NavIcon from "../assets/icons/NavIcon";
-import FadeInContainer from "./FadeInContainer";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const NavBar = () => {
+    const constraintsRef = useRef(null);
+
     return ( 
-        <FadeInContainer children={
-            <div className="nav">
+        <div className="nav" ref={constraintsRef}>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8, marginTop: "200px" }}
+                whileInView={{ opacity: 1, scale: 1, marginTop: "0px" }}
+                transition={{ duration: .5 }}
+                drag
+                dragConstraints={ 
+                    constraintsRef
+                }
+                whileTap={{ scale: 0.85 }}
+                >
                 <NavIcon />
-            </div>
-        } /> 
+            </motion.div>
+        </div>
     );
 }
  

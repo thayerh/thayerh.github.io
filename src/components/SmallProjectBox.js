@@ -1,10 +1,13 @@
 import Arrow from "../assets/icons/Arrow"
-import FadeInContainer from "./FadeInContainer";
+import { motion } from "framer-motion";
 
 const SmallProjectBox = ({bg, tc, title, num, to}) => {
     return ( 
         <a href={to} className="smallProjectBox">
-            <FadeInContainer children= {
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: .5 }}>
                 <div className="bubbleContainer spbContainer" style={{
                     backgroundColor: bg,
                     color: tc
@@ -19,7 +22,7 @@ const SmallProjectBox = ({bg, tc, title, num, to}) => {
                         <Arrow p={tc} w="12" h="16" /> 
                     </div>
                 </div>
-            } />
+            </motion.div>
         </a>
     );
 }

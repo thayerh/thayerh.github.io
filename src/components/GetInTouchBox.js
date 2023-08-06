@@ -1,9 +1,12 @@
 import Keyboard from "../assets/icons/Keyboard";
-import FadeInContainer from "./FadeInContainer";
+import { motion } from "framer-motion";
 
 const GetInTouchBox = ({bg, tc, title, body}) => {
     return (  
-        <FadeInContainer children={   
+        <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: .5 }}>   
             <div className="bubbleContainer gitbContainer" style={{
                 backgroundColor: bg,
                 color: tc
@@ -20,7 +23,7 @@ const GetInTouchBox = ({bg, tc, title, body}) => {
                     <Keyboard p={tc} s={bg} w="24" h="32" />
                 </div>
             </div>
-        } />
+        </motion.div>
     );
 }
  

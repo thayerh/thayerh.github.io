@@ -20,6 +20,16 @@ a {
   width: 180px;
 }
 
+.navIconDragConstraints {
+  width: 80vw;
+  min-height: 200px;
+  height: 24vh;
+  position: absolute;
+  top: 0;
+  left: 50px;
+  z-index: -1;
+}
+
 
 .bubbleContainer {
   display: flex;

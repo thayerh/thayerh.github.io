@@ -1,8 +1,11 @@
-import FadeInContainer from "./FadeInContainer";
+import { motion } from "framer-motion";
 
 const BigTextBox = ({bg, tc, fs, head, body}) => {
     return ( 
-        <FadeInContainer children={
+        <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: .5 }}>
             <div className="bubbleContainer btbContainer" style={{
                 backgroundColor: bg,
                 color: tc
@@ -16,7 +19,7 @@ const BigTextBox = ({bg, tc, fs, head, body}) => {
                     }}>{body}</h2> 
                 </div>
             </div>
-        } />
+        </motion.div>
     );
 }
  

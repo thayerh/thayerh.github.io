@@ -1,10 +1,13 @@
 import Arrow from "../assets/icons/Arrow"
-import FadeInContainer from "./FadeInContainer";
+import { motion } from "framer-motion";
 
 const SlideTextBox = ({bg, tc, to}) => {
     return ( 
         <a href={to} className="slideTextBox">
-            <FadeInContainer children= {
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: .5 }}>
                 <div className="bubbleContainer stbContainer" style={{
                     backgroundColor: bg,
                     color: tc
@@ -20,7 +23,7 @@ const SlideTextBox = ({bg, tc, to}) => {
                         <Arrow p={tc} w="24" h="32" /> 
                     </div>
                 </div>
-            } />
+            </motion.div>
         </a>
     );
 }
