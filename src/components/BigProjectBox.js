@@ -1,9 +1,10 @@
 import Arrow from "../assets/icons/Arrow"
 import { motion } from "framer-motion";
 
-const BigProjectBox = ({bg, tc, title, num, to}) => {
+const BigProjectBox = ({bg, tc, title, num, to, id}) => {
+
     return ( 
-        <a href={to} className="bigProjectBox">
+        //<a href={to} className="bigProjectBox" id={id}>
             <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -23,7 +24,7 @@ const BigProjectBox = ({bg, tc, title, num, to}) => {
                     </div>
                 </div>
             </motion.div>
-        </a>
+        //</a>
     );
 }
  
