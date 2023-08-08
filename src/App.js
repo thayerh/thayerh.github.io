@@ -54,7 +54,7 @@ function App() {
             <AboutIcon p={Colors.spaceCadet} s={Colors.frenchGray} />} to="#"/>
         </div>
         <ContactNavBox bg={Colors.icterine} tc={Colors.spaceCadet} text="Contact Me" icon={
-          <Contact p={Colors.spaceCadet} /> } />
+          <Contact p={Colors.spaceCadet} w="50px" /> } />
         </div>
         
         <div className="group">
@@ -82,7 +82,7 @@ function App() {
         <GetInTouchBox bg={Colors.persianGreen} tc={Colors.frenchGray} title="Get in touch" body="I’m always looking for new opportunities and projects, so feel free to reach out!" />
         </div>
         
-        <h3 style={{color: Colors.white, textAlign: "center", marginTop: "50px"}}>© 2023 Thayer Hicks</h3>
+        <h3 style={{color: Colors.white, textAlign: "center", margin: "50px"}}>© 2023 Thayer Hicks</h3>
       </div>
     </div>
   );
