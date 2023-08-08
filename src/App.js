@@ -12,6 +12,9 @@ import NavBar from './components/NavBar';
 import SkillDescBox from './components/SkillDescBox';
 import SlideTextBox from './components/SlideTextBox';
 import SmallProjectBox from './components/SmallProjectBox';
+import Contact from './assets/icons/Contact';
+import CurlyBraces from './assets/icons/CurlyBraces';
+import Book from './assets/icons/Book';
 
 const Colors = {
   white: "#ffffff",
@@ -51,16 +54,15 @@ function App() {
             <AboutIcon p={Colors.spaceCadet} s={Colors.frenchGray} />} to="#"/>
         </div>
         <ContactNavBox bg={Colors.icterine} tc={Colors.spaceCadet} text="Contact Me" icon={
-          <Keyboard p={Colors.spaceCadet} s={Colors.icterine} /> } to="#"/>
-
+          <Contact p={Colors.spaceCadet} /> } />
         </div>
         
         <div className="group">
         <BigTextBox bg={Colors.celadon} tc={Colors.marianBlue} fs="26pt" head="What I do well" body="I craft elegant code solutions with a passion for continuous learning and improvement."/>
         <SkillDescBox bg={Colors.spaceCadet} tc={Colors.white} head="Elegant Code" text="I have experience in modernizing legacy code, ensuring it's easily comprehensible for streamlined teamwork and smooth future updates."
-          icon={<Keyboard p={Colors.white} s={Colors.spaceCadet}/>} />
+          icon={<CurlyBraces p={Colors.white} w="40px" />} />
         <SkillDescBox bg={Colors.spaceCadet} tc={Colors.white} head="Learning" text="Embarking on a self-taught coding journey ignited my passion for continuous learning, driving me to constantly evolve and embrace new challenges in software development."
-          icon={<Keyboard p={Colors.white} s={Colors.spaceCadet}/>} />
+          icon={<Book p={Colors.white} w="40px" />} />
         </div>
 
         <div className="group">
@@ -76,7 +78,7 @@ function App() {
         </div>
         
         <div className="group">
-        <BigTextBox bg={Colors.icterine} tc={Colors.persianGreen} fc="17pt" head="I'm a Software Developer" body="I got my first taste of the thrilling atmosphere of software development a third grade Lego robotics competiton. As a native Oregonian, being outside is in my blood."/>
+        <BigTextBox bg={Colors.icterine} tc={Colors.persianGreen} fc="17pt" head="About me" body="I got my first taste of the thrilling atmosphere of software development a third grade Lego robotics competiton. As a native Oregonian, being outside is in my blood."/>
         <GetInTouchBox bg={Colors.persianGreen} tc={Colors.frenchGray} title="Get in touch" body="I’m always looking for new opportunities and projects, so feel free to reach out!" />
         </div>
         

@@ -146,7 +146,7 @@ a {
   width: 100%;
   padding: 25px;
   justify-content: space-between;
-  gap: 8px;
+  gap: 12px;
 }
 
 .sdbRight h2 {
@@ -213,14 +213,13 @@ a {
 
 
 .gitbContainer {
-  min-height: 426px;
-  height: 63vh; 
   border-radius: 50px;
   width: 100%;
   padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 24px;
 }
 
 .gitbChild {
@@ -251,6 +250,7 @@ a {
 .visible {
   opacity: 1;
 }
+
 
 
 @media (min-width: 700px) {

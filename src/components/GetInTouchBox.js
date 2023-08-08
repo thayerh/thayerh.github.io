@@ -1,5 +1,7 @@
-import Keyboard from "../assets/icons/Keyboard";
 import { motion } from "framer-motion";
+import Insta from "../assets/icons/Insta";
+import LinkedIn from "../assets/icons/LinkedIn";
+import Facebook from "../assets/icons/Facebook";
 
 const GetInTouchBox = ({bg, tc, title, body}) => {
     return (  
@@ -18,9 +20,9 @@ const GetInTouchBox = ({bg, tc, title, body}) => {
                     <h3>{body}</h3>
                 </div>
                 <div className="gitbChild gitbBottom">
-                    <Keyboard p={tc} s={bg} w="24" h="32" />
-                    <Keyboard p={tc} s={bg} w="24" h="32" />
-                    <Keyboard p={tc} s={bg} w="24" h="32" />
+                    <Insta p={tc} s={bg} w="60px" />
+                    <LinkedIn p={tc} s={bg} w="60px" />
+                    <Facebook p={tc} s={bg} w="60px" />
                 </div>
             </div>
         </motion.div>
