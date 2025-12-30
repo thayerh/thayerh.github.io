@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Thayer Hicks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">TH</a>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="research.html">Research</a>
+            <a href="music.html">Music</a>
+            <a href="blog.html">Blog</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1 class="page-title">Research 🔬</h1>
+            <p class="page-description">
+                Exploring the boundaries of real-time systems, autonomous vehicles, and hardware-software co-design.
+            </p>
+        </header>
+
+        <section>
+            <article class="research-card">
+                <div class="research-status">
+                    <span class="status-dot"></span>
+                    Paper Submitted to RTAS 2026
+                </div>
+                <h2>Real-Time DDS Communication for Autonomous Vehicles</h2>
+                <p class="research-lab">UNC Computational Robotics Lab</p>
+                <p>
+                    This research focuses on enabling real-time communication between sensors and actuators in autonomous vehicle systems using ROS 2 and Data Distribution Service (DDS). I'm developing and testing solutions using Autoware and AWSIM with Unity to simulate autonomous driving scenarios.
+                </p>
+                <p>
+                    A key contribution is <strong>Auto-Reach</strong>, a tool I created to facilitate the connection between two open source autonomous vehicle simulation stacks, enabling researchers to more easily test and validate their real-time communication systems.
+                </p>
+                
+                <div class="research-details">
+                    <div class="research-detail">
+                        <h4>Technologies</h4>
+                        <p>ROS 2, DDS, Autoware, AWSIM, Unity, C++, Python</p>
+                    </div>
+                    <div class="research-detail">
+                        <h4>Timeline</h4>
+                        <p>September 2024 – Present</p>
+                    </div>
+                    <div class="research-detail">
+                        <h4>Focus Areas</h4>
+                        <p>Real-time systems, Middleware, Autonomous vehicles</p>
+                    </div>
+                    <div class="research-detail">
+                        <h4>Status</h4>
+                        <p>Paper submitted to RTAS 2026</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="research-card">
+                <div class="research-status">
+                    <span class="status-dot"></span>
+                    Paper Submission Planned - Summer 2026
+                </div>
+                <h2>Formally Verified Python-to-Verilog Compiler</h2>
+                <p class="research-lab">UNC Brain Computer Interface Lab</p>
+                <p>
+                    I'm developing a formally verified compiler that translates Python code into Verilog, enabling seamless hardware-software co-design. This work explores Processing-in-Memory (PIM) hardware architectures specifically optimized for Fast Fourier Transformations (FFT).
+                </p>
+                <p>
+                    The goal is to create a verified toolchain that allows researchers to write high-level Python code and automatically generate correct-by-construction hardware implementations for signal processing applications in brain-computer interfaces.
+                </p>
+                
+                <div class="research-details">
+                    <div class="research-detail">
+                        <h4>Technologies</h4>
+                        <p>Python, Verilog, Formal Verification, FFT algorithms</p>
+                    </div>
+                    <div class="research-detail">
+                        <h4>Timeline</h4>
+                        <p>August 2025 – Present</p>
+                    </div>
+                    <div class="research-detail">
+                        <h4>Focus Areas</h4>
+                        <p>Compilers, Hardware synthesis, Processing-in-Memory</p>
+                    </div>
+                    <div class="research-detail">
+                        <h4>Status</h4>
+                        <p>Active development</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="work-section" style="margin-top: var(--space-3xl);">
+            <h2>📚 Publications</h2>
+            
+            <div class="empty-state">
+                <span>📝</span>
+                <p>Publications coming soon. Paper submitted to RTAS 2026.</p>
+            </div>
+            
+            <!-- FILLER: Add publications as they come
+            <article class="experience-card">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Paper Title Here</h3>
+                        <p>Conference/Journal Name, Year</p>
+                    </div>
+                    <div class="experience-date">
+                        PDF · DOI
+                    </div>
+                </div>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    Paper abstract or summary goes here.
+                </p>
+            </article>
+            -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Thayer Hicks · Built with curiosity</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

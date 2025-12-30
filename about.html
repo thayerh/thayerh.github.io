@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Thayer Hicks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">TH</a>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="research.html">Research</a>
+            <a href="music.html">Music</a>
+            <a href="blog.html">Blog</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1 class="page-title">About Me 👋</h1>
+            <p class="page-description">
+                Software engineer with an unusual background — I build real-time systems by day and play French horn by night.
+            </p>
+        </header>
+
+        <div class="about-grid">
+            <div class="about-content">
+                <section>
+                    <h2>The Short Version</h2>
+                    <p>
+                        I'm a graduate student at the University of North Carolina at Chapel Hill pursuing my M.S. in Computer Science while completing dual undergraduate degrees in Computer Science and Music. My work sits at the intersection of systems programming, robotics, and real-time computing.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>What I'm Working On</h2>
+                    <p>
+                        Currently, I'm doing research at two labs: the <strong>Computational Robotics Lab</strong> where I work on real-time communication systems for autonomous vehicles using ROS 2 and DDS, and the <strong>Brain Computer Interface Lab</strong> where I'm developing a formally verified compiler that translates Python into Verilog for hardware-software co-design.
+                    </p>
+                    <p>
+                        I'm also a Graduate Teaching Assistant for <strong>COMP 581 - Introduction to Robotics</strong>, helping students understand motion planning, perception, and robot control systems.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>The Unusual Part</h2>
+                    <p>
+                        Unlike most software engineers, I also hold a B.A. in Music and serve as Principal French Horn in the UNC Symphony Orchestra. I find that music and programming share more than you might think — both require precision, pattern recognition, and the ability to think in systems.
+                    </p>
+                    <p>
+                        This unique background has given me a different perspective on problem-solving. When I'm debugging a race condition or optimizing a real-time system, I approach it with the same attention to timing and coordination that I bring to orchestral performance.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Beyond Code</h2>
+                    <p>
+                        <!-- FILLER: Add your hobbies, interests, and what makes you unique -->
+                        When I'm not coding or playing music, you can find me [your hobbies here]. I'm passionate about [your passions here] and believe that [your philosophy here].
+                    </p>
+                    <p>
+                        I'm always interested in connecting with people who are building interesting things. Feel free to reach out at <a href="mailto:thayerhicks@gmail.com" style="color: var(--accent-primary);">thayerhicks@gmail.com</a>.
+                    </p>
+                </section>
+            </div>
+
+            <aside class="about-sidebar">
+                <div class="sidebar-section">
+                    <h3>Education</h3>
+                    <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+                        <div>
+                            <strong style="color: var(--text-primary);">M.S. Computer Science</strong>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">UNC Chapel Hill · 4.0 GPA</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-primary);">B.S. Computer Science</strong>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">UNC Chapel Hill · 3.9 GPA</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--text-primary);">B.A. Music</strong>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">UNC Chapel Hill</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Verilog</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">MIPS Assembly</span>
+                        <span class="skill-tag">x86 Assembly</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Technologies</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">ROS 2</span>
+                        <span class="skill-tag">OpenShift</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Certifications</h3>
+                    <div class="cert-list">
+                        <span class="cert-item">Azure Fundamentals</span>
+                        <span class="cert-item">CI/CD with Jenkins</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>Location</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Chapel Hill, NC</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Thayer Hicks · Built with curiosity</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

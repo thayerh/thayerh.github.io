@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thayer Hicks | Software Engineer & Musician</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">TH</a>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="work.html">Work</a>
+            <a href="research.html">Research</a>
+            <a href="music.html">Music</a>
+            <a href="blog.html">Blog</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Available for opportunities</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="greeting">Hey, I'm</span>
+                    <span class="name-reveal">Thayer Hicks</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Software Engineer crafting systems at the intersection of 
+                    <span class="highlight">robotics</span>, 
+                    <span class="highlight">real-time computing</span>, and 
+                    <span class="highlight">classical music</span>.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">4.0</span>
+                        <span class="stat-label">M.S. GPA</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Internships</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Research Labs</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="mailto:thayerhicks@gmail.com" class="btn btn-primary">
+                        <span>Get in touch</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="work.html" class="btn btn-secondary">View my work</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="code-title">thayer.py</span>
+                    </div>
+                    <pre class="code-content"><code><span class="keyword">class</span> <span class="class-name">Thayer</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(self):
+        self.role = <span class="string">"Software Engineer"</span>
+        self.education = <span class="string">"UNC Chapel Hill"</span>
+        self.passions = [
+            <span class="string">"Real-time Systems"</span>,
+            <span class="string">"Autonomous Vehicles"</span>,
+            <span class="string">"French Horn"</span> <span class="comment"># 🎵</span>
+        ]
+    
+    <span class="keyword">def</span> <span class="function">current_focus</span>(self):
+        <span class="keyword">return</span> {
+            <span class="string">"research"</span>: <span class="string">"DDS @ RTAS 2026"</span>,
+            <span class="string">"teaching"</span>: <span class="string">"COMP 581 Robotics"</span>,
+            <span class="string">"building"</span>: <span class="string">"Always something new"</span>
+        }</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-section">
+            <h2 class="section-title">
+                <span class="section-icon">⚡</span>
+                Currently
+            </h2>
+            
+            <div class="current-grid">
+                <div class="current-card">
+                    <span class="current-label">Research</span>
+                    <h3>Autonomous Vehicle Simulation</h3>
+                    <p>Working on real-time DDS communication for ROS 2 systems at the UNC Computational Robotics Lab.</p>
+                    <a href="research.html" class="card-link">Learn more →</a>
+                </div>
+                
+                <div class="current-card">
+                    <span class="current-label">Teaching</span>
+                    <h3>COMP 581 - Robotics</h3>
+                    <p>Graduate Teaching Assistant helping students understand motion planning and robot perception.</p>
+                    <a href="about.html" class="card-link">About me →</a>
+                </div>
+                
+                <div class="current-card">
+                    <span class="current-label">Music</span>
+                    <h3>UNC Symphony Orchestra</h3>
+                    <p>Principal French Horn, blending technical precision with artistic expression.</p>
+                    <a href="music.html" class="card-link">My music →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline-preview">
+            <h2 class="section-title">
+                <span class="section-icon">📍</span>
+                Recent Experience
+            </h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Summer 2025</span>
+                        <h3>Wells Fargo - Enterprise Functions Technology</h3>
+                        <p>Built device health dashboard monitoring $5B+ in trader systems. Flask, SQLAlchemy, OpenShift.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Summer 2024</span>
+                        <h3>Wells Fargo - WIM Technology</h3>
+                        <p>Spring Boot API for enterprise observability. Splunk integration for real-time monitoring.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Summer 2023</span>
+                        <h3>KendallTodd Inc.</h3>
+                        <p>Modernized mortgage calculators with React. Serverless architecture with AWS Lambda.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="work.html" class="section-link">View full experience →</a>
+        </section>
+
+        <section class="connect-section">
+            <h2 class="section-title">
+                <span class="section-icon">🔗</span>
+                Connect
+            </h2>
+            
+            <div class="social-grid">
+                <a href="https://github.com/thayerh" class="social-card" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                
+                <a href="https://linkedin.com/in/thayer-hicks-unc" class="social-card" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                
+                <a href="mailto:thayerhicks@gmail.com" class="social-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    <span>Email</span>
+                </a>
+                
+                <a href="Thayer_Hicks_Resume_11_06_25.pdf" class="social-card" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
+                    </svg>
+                    <span>Resume</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Thayer Hicks · Built with curiosity</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
