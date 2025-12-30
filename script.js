@@ -28,6 +28,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // ========================================
+    // Email Modal
+    // ========================================
+    const emailBtn = document.getElementById('emailBtn');
+    const emailModal = document.getElementById('emailModal');
+    const closeEmailModal = document.getElementById('closeEmailModal');
+    
+    if (emailBtn && emailModal) {
+        emailBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            emailModal.classList.add('show');
+        });
+        
+        closeEmailModal.addEventListener('click', () => {
+            emailModal.classList.remove('show');
+        });
+        
+        emailModal.addEventListener('click', (e) => {
+            if (e.target === emailModal) {
+                emailModal.classList.remove('show');
+            }
+        });
+        
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && emailModal.classList.contains('show')) {
+                emailModal.classList.remove('show');
+            }
+        });
+    }
+    
+    // ========================================
     // Scroll Animations
     // ========================================
     const observerOptions = {
