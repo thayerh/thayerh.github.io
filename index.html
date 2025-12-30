@@ -32,10 +32,13 @@
                 </h1>
                 
                 <p class="hero-subtitle">
-                    Software Engineer crafting systems at the intersection of 
+                    a Software Engineer crafting systems in the fields of 
                     <span class="highlight">robotics</span>, 
                     <span class="highlight">real-time computing</span>, and 
-                    <span class="highlight">classical music</span>.
+                    <span class="highlight">brain-computer interfaces</span>.
+                    I'm also a freelance 
+                    <span class="highlight">French horn</span> 
+                    player.
                 </p>
 
                 <div class="hero-stats">
@@ -72,24 +75,33 @@
                         <div class="code-dots">
                             <span></span><span></span><span></span>
                         </div>
-                        <span class="code-title">thayer.py</span>
+                        <span class="code-title">thayer.cpp</span>
+                        <select class="theme-selector" id="codeTheme">
+                            <option value="night-owl">Night Owl</option>
+                            <option value="dracula">Dracula</option>
+                            <option value="solarized-light">Solarized Light</option>
+                        </select>
                     </div>
-                    <pre class="code-content"><code><span class="keyword">class</span> <span class="class-name">Thayer</span>:
-    <span class="keyword">def</span> <span class="function">__init__</span>(self):
-        self.role = <span class="string">"Software Engineer"</span>
-        self.education = <span class="string">"UNC Chapel Hill"</span>
-        self.passions = [
-            <span class="string">"Real-time Systems"</span>,
-            <span class="string">"Autonomous Vehicles"</span>,
-            <span class="string">"French Horn"</span> <span class="comment"># 🎵</span>
-        ]
-    
-    <span class="keyword">def</span> <span class="function">current_focus</span>(self):
-        <span class="keyword">return</span> {
-            <span class="string">"research"</span>: <span class="string">"DDS @ RTAS 2026"</span>,
-            <span class="string">"teaching"</span>: <span class="string">"COMP 581 Robotics"</span>,
-            <span class="string">"building"</span>: <span class="string">"Always something new"</span>
-        }</code></pre>
+                    <pre class="code-content"><code><span class="keyword">#include</span> <span class="string">&lt;string&gt;</span>
+<span class="keyword">#include</span> <span class="string">&lt;vector&gt;</span>
+
+<span class="keyword">class</span> <span class="class-name">Thayer</span> {
+<span class="keyword">private</span>:
+    std::string role;
+    std::string education;
+    std::vector&lt;std::string&gt; passions;
+
+<span class="keyword">public</span>:
+    <span class="function">Thayer</span>() {
+        role = <span class="string">"Masters Student"</span>;
+        education = <span class="string">"UNC Chapel Hill"</span>;
+        passions = {
+            <span class="string">"Robotics"</span>,
+            <span class="string">"Brain-Computer Interfaces"</span>,
+            <span class="string">"French Horn"</span>
+        };
+    }
+};</code></pre>
                 </div>
             </div>
         </section>
@@ -103,8 +115,8 @@
             <div class="current-grid">
                 <div class="current-card">
                     <span class="current-label">Research</span>
-                    <h3>Autonomous Vehicle Simulation</h3>
-                    <p>Working on real-time DDS communication for ROS 2 systems at the UNC Computational Robotics Lab.</p>
+                    <h3>BCI Hardware Generation</h3>
+                    <p>Working on accurate, efficient hardware generation for signal processing at the UNC Brain-Computer Interface Lab.</p>
                     <a href="research.html" class="card-link">Learn more →</a>
                 </div>
                 
@@ -118,7 +130,7 @@
                 <div class="current-card">
                     <span class="current-label">Music</span>
                     <h3>UNC Symphony Orchestra</h3>
-                    <p>Principal French Horn, blending technical precision with artistic expression.</p>
+                    <p>Associate Principal French Horn, blending technical precision with artistic expression.</p>
                     <a href="music.html" class="card-link">My music →</a>
                 </div>
             </div>

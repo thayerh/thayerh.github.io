@@ -64,6 +64,26 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
     
     // ========================================
+    // Code Theme Selector
+    // ========================================
+    const themeSelector = document.getElementById('codeTheme');
+    const codeWindow = document.querySelector('.code-window');
+    
+    if (themeSelector && codeWindow) {
+        // Load saved theme preference
+        const savedTheme = localStorage.getItem('codeTheme') || 'night-owl';
+        themeSelector.value = savedTheme;
+        codeWindow.setAttribute('data-theme', savedTheme);
+        
+        // Handle theme changes
+        themeSelector.addEventListener('change', (e) => {
+            const theme = e.target.value;
+            codeWindow.setAttribute('data-theme', theme);
+            localStorage.setItem('codeTheme', theme);
+        });
+    }
+    
+    // ========================================
     // Typing Effect for Code Window
     // ========================================
     const codeContent = document.querySelector('.code-content code');

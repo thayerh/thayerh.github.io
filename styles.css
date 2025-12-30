@@ -374,6 +374,29 @@ body {
     color: var(--text-muted);
 }
 
+.theme-selector {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: var(--space-xs) var(--space-sm);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.theme-selector:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+}
+
+.theme-selector:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+}
+
 .code-content {
     padding: var(--space-lg);
     font-family: var(--font-mono);
@@ -386,11 +409,38 @@ body {
     color: var(--text-secondary);
 }
 
-.keyword { color: #c792ea; }
-.class-name { color: #82aaff; }
-.function { color: #82aaff; }
-.string { color: #c3e88d; }
-.comment { color: #676e95; }
+/* Night Owl Theme (Default) */
+.code-window[data-theme="night-owl"] .keyword,
+.code-window:not([data-theme]) .keyword { color: #c792ea; }
+.code-window[data-theme="night-owl"] .class-name,
+.code-window:not([data-theme]) .class-name { color: #82aaff; }
+.code-window[data-theme="night-owl"] .function,
+.code-window:not([data-theme]) .function { color: #82aaff; }
+.code-window[data-theme="night-owl"] .string,
+.code-window:not([data-theme]) .string { color: #c3e88d; }
+.code-window[data-theme="night-owl"] .comment,
+.code-window:not([data-theme]) .comment { color: #676e95; }
+
+/* Dracula Theme */
+.code-window[data-theme="dracula"] { background: #282a36; border-color: #44475a; }
+.code-window[data-theme="dracula"] .code-header { background: #21222c; border-color: #44475a; }
+.code-window[data-theme="dracula"] .keyword { color: #ff79c6; }
+.code-window[data-theme="dracula"] .class-name { color: #8be9fd; }
+.code-window[data-theme="dracula"] .function { color: #50fa7b; }
+.code-window[data-theme="dracula"] .string { color: #f1fa8c; }
+.code-window[data-theme="dracula"] .comment { color: #6272a4; }
+.code-window[data-theme="dracula"] code { color: #f8f8f2; }
+
+/* Solarized Light Theme */
+.code-window[data-theme="solarized-light"] { background: #fdf6e3; border-color: #eee8d5; }
+.code-window[data-theme="solarized-light"] .code-header { background: #eee8d5; border-color: #d3cbb7; }
+.code-window[data-theme="solarized-light"] .code-title { color: #657b83; }
+.code-window[data-theme="solarized-light"] .keyword { color: #859900; }
+.code-window[data-theme="solarized-light"] .class-name { color: #268bd2; }
+.code-window[data-theme="solarized-light"] .function { color: #b58900; }
+.code-window[data-theme="solarized-light"] .string { color: #2aa198; }
+.code-window[data-theme="solarized-light"] .comment { color: #93a1a1; }
+.code-window[data-theme="solarized-light"] code { color: #586e75; }
 
 /* ========================================
    Section Styles
@@ -445,6 +495,8 @@ body {
     border-radius: var(--radius-lg);
     padding: var(--space-xl);
     transition: var(--transition-base);
+    display: flex;
+    flex-direction: column;
 }
 
 .current-card:hover {
@@ -482,6 +534,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition-fast);
+    margin-top: auto;
 }
 
 .card-link:hover {
