@@ -101,11 +101,23 @@
         }
         .gif-container {
             margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .gif-container img {
-            max-width: 400px;
+            max-width: 280px;
+            height: 350px;
+            object-fit: cover;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 768px) {
+            .gif-container img {
+                max-width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -118,6 +130,7 @@
                 <button id="yesBtn">Yes! 💕</button>
                 <button id="noBtn">No</button>
             </div>
+            <div class="gif-container" id="photoContainer"></div>
         </div>
         
         <div class="final-message" id="finalMessage">
@@ -125,9 +138,6 @@
             <h1>Yay! 💖</h1>
             <p>You just made me the happiest person ever! 🥰</p>
             <p style="font-size: 1.2rem; margin-top: 2rem;">Happy Valentine's Day! ❤️</p>
-            <div class="gif-container">
-                <img src="https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif" alt="Celebration">
-            </div>
         </div>
     </div>
 
@@ -143,6 +153,13 @@
         let noClickCount = 0;
         let yesBtnSize = 1;
         let currentRound = 1;
+        
+        const photos = [
+            '78798274398__17708728-BE64-4169-95B1-B4D977F29D2F.jpeg',
+            'IMG_8304.jpeg',
+            'IMG_2647.jpeg',
+            'IMG_4180.jpeg'
+        ];
         
         const rounds = {
             1: {
@@ -219,9 +236,27 @@
             setTimeout(() => heart.remove(), 3000);
         }
 
+        function addPhoto(roundNum) {
+            const photoIndex = roundNum - 2; // Start showing photos from round 2
+            if (photoIndex >= 0 && photoIndex < photos.length) {
+                const photoContainer = document.getElementById('photoContainer');
+                photoContainer.innerHTML = ''; // Clear previous photo
+                const img = document.createElement('img');
+                img.src = photos[photoIndex];
+                img.alt = 'Us';
+                img.style.animation = 'fadeIn 1s ease-in';
+                photoContainer.appendChild(img);
+            }
+        }
+
         function nextRound() {
             currentRound++;
             noClickCount = 0;
+            
+            // Show one photo at a time for rounds 2, 3, and 4
+            if (currentRound >= 2 && currentRound <= 5) {
+                addPhoto(currentRound);
+            }
             
             if (currentRound > 5) {
                 // Create heart explosion
