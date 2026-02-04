@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💝</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #ffeef8 0%, #ffe4f0 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+        }
+        .emoji {
+            font-size: 6rem;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #d63384;
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            position: relative;
+        }
+        button {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        #yesBtn {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            color: white;
+        }
+        #yesBtn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(255,107,157,0.4);
+        }
+        #noBtn {
+            background: #e0e0e0;
+            color: #666;
+            position: relative;
+        }
+        .hearts {
+            position: fixed;
+            pointer-events: none;
+            animation: fall 3s linear;
+        }
+        @keyframes fall {
+            to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        .final-message {
+            display: none;
+            animation: scaleIn 0.5s ease-out;
+        }
+        @keyframes scaleIn {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .final-message h1 {
+            font-size: 3rem;
+            color: #ff006e;
+        }
+        .final-message p {
+            font-size: 1.5rem;
+            color: #d63384;
+            margin-top: 1rem;
+            line-height: 1.8;
+        }
+        .gif-container {
+            margin-top: 2rem;
+        }
+        .gif-container img {
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="question">
+            <div class="emoji">💝</div>
+            <h1 id="questionText">Will you be my Valentine?</h1>
+            <div class="buttons">
+                <button id="yesBtn">Yes! 💕</button>
+                <button id="noBtn">No</button>
+            </div>
+        </div>
+        
+        <div class="final-message" id="finalMessage">
+            <div class="emoji">🎉</div>
+            <h1>Yay! 💖</h1>
+            <p>You just made me the happiest person ever! 🥰</p>
+            <p style="font-size: 1.2rem; margin-top: 2rem;">Happy Valentine's Day! ❤️</p>
+            <div class="gif-container">
+                <img src="https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif" alt="Celebration">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const questionText = document.getElementById('questionText');
+        const question = document.getElementById('question');
+        const finalMessage = document.getElementById('finalMessage');
+        const emoji = document.querySelector('.emoji');
+        const buttonsDiv = document.querySelector('.buttons');
+        
+        let noClickCount = 0;
+        let yesBtnSize = 1;
+        let currentRound = 1;
+        
+        const rounds = {
+            1: {
+                questions: [
+                    "Will you be my Valentine?",
+                    "Are you sure? 🥺",
+                    "Really sure? Think about it... 💭",
+                    "What if I asked really nicely? 🙏",
+                    "Pretty please? 🌹",
+                    "I'll buy you chocolate! 🍫",
+                    "Come on, you know you want to! 😊",
+                    "Just say yes already! 💝",
+                    "I'm not giving up! ❤️",
+                    "Last chance before I cry! 😢"
+                ],
+                emoji: "💝"
+            },
+            2: {
+                questions: [
+                    "Wait wait wait... Are you REALLY sure? 🤔",
+                    "Like 100% sure? 🧐",
+                    "No take-backsies! 😤",
+                    "This is legally binding! ⚖️",
+                    "I'm writing this down! 📝",
+                    "Your friends will know! 👀",
+                    "There's no escape now! 🏃‍♀️"
+                ],
+                emoji: "🤨"
+            },
+            3: {
+                questions: [
+                    "On a scale of 1-10, how excited are you? 📊",
+                    "Actually, only 10 is acceptable! 💯",
+                    "Say 10! SAY IT! 🗣️",
+                    "10 is the only correct answer! ✅",
+                    "Fine, 9.5 works too... 😒",
+                    "Okay okay, anything above 7! 📈"
+                ],
+                emoji: "📊"
+            },
+            4: {
+                questions: [
+                    "Prove it by clicking 'Yes' 100 times! 🖱️",
+                    "Just kidding... or am I? 😏",
+                    "Okay fine, just once more! 😅",
+                    "But say it like you MEAN it! 💪",
+                    "With FEELING! 🎭",
+                    "ENTHUSIASM! 🎉"
+                ],
+                emoji: "🎯"
+            },
+            5: {
+                questions: [
+                    "Last question, I promise! 🤞",
+                    "Do you pinky promise? 🤙",
+                    "Cross your heart? ❤️",
+                    "Scout's honor? 🏕️",
+                    "Swear on pizza? 🍕",
+                    "Okay I believe you! 🥰"
+                ],
+                emoji: "🤝"
+            }
+        };
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('hearts');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = Math.random() * 2 + 1 + 'rem';
+            heart.style.top = '-50px';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 3000);
+        }
+
+        function nextRound() {
+            currentRound++;
+            noClickCount = 0;
+            
+            if (currentRound > 5) {
+                // Create heart explosion
+                for (let i = 0; i < 50; i++) {
+                    setTimeout(() => createHeart(), i * 30);
+                }
+                
+                // Show final message
+                setTimeout(() => {
+                    question.style.display = 'none';
+                    finalMessage.style.display = 'block';
+                }, 500);
+            } else {
+                // Reset button positions and sizes
+                noBtn.style.position = 'relative';
+                noBtn.style.left = '';
+                noBtn.style.top = '';
+                noBtn.style.transform = 'scale(1)';
+                noBtn.style.fontSize = '1.2rem';
+                noBtn.textContent = 'No';
+                yesBtnSize = 1;
+                yesBtn.style.transform = 'scale(1)';
+                
+                // Update to next round
+                emoji.textContent = rounds[currentRound].emoji;
+                questionText.textContent = rounds[currentRound].questions[0];
+                
+                // Add celebration for progressing
+                for (let i = 0; i < 10; i++) {
+                    setTimeout(() => createHeart(), i * 50);
+                }
+            }
+        }
+
+        yesBtn.addEventListener('click', () => {
+            nextRound();
+        });
+
+        noBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            noClickCount++;
+            
+            const currentQuestions = rounds[currentRound].questions;
+            
+            // Update question
+            if (noClickCount < currentQuestions.length) {
+                questionText.textContent = currentQuestions[noClickCount];
+            }
+            
+            // Make Yes button bigger
+            yesBtnSize += 0.2;
+            yesBtn.style.transform = `scale(${yesBtnSize})`;
+            
+            // Make No button move randomly
+            const randomX = Math.random() * 250 - 125;
+            const randomY = Math.random() * 250 - 125;
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = `calc(50% + ${randomX}px)`;
+            noBtn.style.top = `calc(50% + ${randomY}px)`;
+            
+            // Make No button smaller
+            noBtn.style.transform = `scale(${Math.max(0.4, 1 - noClickCount * 0.12)})`;
+            
+            // After 3 clicks in any round, make No button harder to click
+            if (noClickCount >= 3) {
+                noBtn.style.fontSize = '0.6rem';
+                noBtn.textContent = 'No? 🥺';
+            }
+            
+            // After 5 clicks, change No button text
+            if (noClickCount >= 5) {
+                noBtn.textContent = '😢';
+                noBtn.style.fontSize = '0.4rem';
+            }
+        });
+
+        // Make No button run away on hover after first click
+        noBtn.addEventListener('mouseenter', () => {
+            if (noClickCount > 0 || currentRound > 1) {
+                const randomX = Math.random() * 300 - 150;
+                const randomY = Math.random() * 300 - 150;
+                noBtn.style.position = 'absolute';
+                noBtn.style.left = `calc(50% + ${randomX}px)`;
+                noBtn.style.top = `calc(50% + ${randomY}px)`;
+                noBtn.style.transition = 'all 0.2s ease';
+            }
+        });
+    </script>
+</body>
+</html>
